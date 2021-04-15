@@ -27,4 +27,4 @@ COPY docker /usr/src/app/docker
 
 CMD ["chmod", "u+x", "/usr/src/app/docker/server/entrypoint.sh"]
 CMD [ "python", "manage.py", "collectstatic" ]
-ENTRYPOINT ["sh", "/usr/src/app/docker/server/entrypoint.sh"]
+ENTRYPOINT ["/usr/src/app/docker/server/entrypoint.sh"]
