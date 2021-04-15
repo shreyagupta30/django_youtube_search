@@ -78,7 +78,7 @@ def save_video_and_thumbail_in_models(result):
 
 def get_time_of_most_recent_uploaded_video():
     resent_date_time = ''
-    search_results = youtube_search_keyword('ipl', 100)
+    search_results = youtube_search_keyword('ipl', 50)
 
     if search_results == {}:
         return
@@ -98,7 +98,7 @@ async def search_and_add_youtube_videos_service():
     resent_date_time = get_time_of_most_recent_uploaded_video()
 
     while True:
-        search_results = youtube_search_keyword('ipl', 100)
+        search_results = youtube_search_keyword('ipl', 50)
 
         if search_results == {}:
             return
@@ -118,7 +118,7 @@ def start_searching_and_adding_youtube_videos():
         api_keys = models.APIKey.objects.filter(is_limit_over=False)
         if len(api_keys):
             asyncio.run(search_and_add_youtube_videos_service())
-        time.sleep(100)
+        time.sleep(20)
 
 
 THREAD = threading.Thread(target=start_searching_and_adding_youtube_videos)
