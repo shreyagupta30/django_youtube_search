@@ -1,15 +1,13 @@
 from rest_framework import serializers
 
-from . import models
-from . import services
+from . import models, services
+
 
 class VideoSerializer(serializers.ModelSerializer):
     thumbnails = serializers.SerializerMethodField()
 
     def get_thumbnails(self, obj):
-        return [
-            VideoThumbNailSerializer(thumbnail).data
-                for thumbnail in models.VideoThumbNail.objects.filter(video=obj)]
+        return [VideoThumbNailSerializer(thumbnail).data for thumbnail in models.VideoThumbNail.objects.filter(video=obj)]
 
     class Meta:
         model = models.Video

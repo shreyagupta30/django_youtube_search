@@ -1,4 +1,5 @@
 import os
+
 import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -32,11 +33,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #third-party apps
+    # third-party apps
     "rest_framework",
     "django_filters",
     "corsheaders",
-    #Django Apps
+    # Django Apps
     'backend.app',
 ]
 

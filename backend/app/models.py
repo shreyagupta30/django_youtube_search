@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Video(models.Model):
-    title =  models.TextField()
-    description =  models.TextField()
-    publish_date_time =  models.DateTimeField(auto_now=False)
+    title = models.TextField()
+    description = models.TextField()
+    publish_date_time = models.DateTimeField(auto_now=False)
     video_id = models.TextField()
     channel_id = models.TextField()
 
@@ -14,6 +14,7 @@ class Video(models.Model):
     class Meta:
         verbose_name = 'Video'
         verbose_name_plural = 'Videos'
+
     def __str__(self):
         return self.title
 
@@ -29,6 +30,7 @@ class VideoThumbNail(models.Model):
     class Meta:
         verbose_name = 'Video Thumbnail'
         verbose_name_plural = 'Video Thumbnails'
+
     def __str__(self):
         return self.video.title
 
@@ -40,5 +42,6 @@ class APIKey(models.Model):
     class Meta:
         verbose_name = 'APIKey'
         verbose_name_plural = 'APIKeys'
+
     def __str__(self):
         return self.key
