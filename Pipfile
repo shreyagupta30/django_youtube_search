@@ -13,7 +13,6 @@ Django = "*"
 Markdown = "*"
 gunicorn = "*"
 django-environ = "*"
-psycopg2 = "*"
 pre-commit = "*"
 
 [dev-packages]
