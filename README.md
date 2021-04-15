@@ -64,7 +64,9 @@ docker-compose up
 
 - `localhost:8000/api/videos?search=<keyword>` - This filters the videos containing the `keyword` mentioned in either title or description or both of the videos.
 <img src = "https://github.com/shreyagupta30/django_youtube_search/blob/master/assets/Screenshot%202021-04-16%20at%203.00.02%20AM.png?raw=true"/>
-We can see in the image below that there are no video with keyword `dog`
-<img src = " https://github.com/shreyagupta30/django_youtube_search/blob/master/assets/Screenshot%202021-04-16%20at%203.00.39%20AM.png?raw=true"/>
+
+We can see in the image below that there are no video with keyword `dog`. <br/>
+
+<img src = "https://github.com/shreyagupta30/django_youtube_search/blob/master/assets/Screenshot%202021-04-16%20at%203.00.39%20AM.png?raw=true"/>
 
 
