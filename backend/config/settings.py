@@ -82,9 +82,9 @@ IN_DOCKER = env.bool("IN_DOCKER", default=False)
 DATABASES = {
     "default": {
         "ENGINE": env("SQL_ENGINE", default='django.db.backends.postgresql_psycopg2'),
-        "NAME": env("DB_NAME", default="postgres"),
-        "USER": env("DB_USER", default="postgres"),
-        "PASSWORD": env("DB_PASS", default="postgres"),
+        "NAME": env("DB_NAME", default="fampay"),
+        "USER": env("DB_USER", default="fampay"),
+        "PASSWORD": env("DB_PASS", default="fampay"),
         "HOST": env("DB_HOST", default="db" if IN_DOCKER else "localhost"),
         "PORT": env("DB_PORT", default="5432"),
     }
