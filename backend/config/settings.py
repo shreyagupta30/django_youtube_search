@@ -77,16 +77,10 @@ WSGI_APPLICATION = 'backend.config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-IN_DOCKER = env.bool("IN_DOCKER", default=False)
-
 DATABASES = {
-    "default": {
-        "ENGINE": env("SQL_ENGINE", default='django.db.backends.postgresql_psycopg2'),
-        "NAME": env("DB_NAME", default="fampay"),
-        "USER": env("DB_USER", default="fampay"),
-        "PASSWORD": env("DB_PASS", default="fampay"),
-        "HOST": env("DB_HOST", default="db" if IN_DOCKER else "localhost"),
-        "PORT": env("DB_PORT", default="5432"),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

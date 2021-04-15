@@ -8,11 +8,6 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# install psycopg2 dependencies
-RUN apt-get update \
-    && apt-get -y install gcc postgresql libpq-dev \
-    && apt-get clean
-
 # expose port
 EXPOSE 8000
 
