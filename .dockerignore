@@ -1,0 +1,5 @@
+.vscode/
+.github/
+!entrypoint.sh
+README.md
+.pre-commit-config.yaml
